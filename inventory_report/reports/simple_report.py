@@ -25,7 +25,6 @@ class SimpleReport:
             # - Empresa com mais produtos: Correia LIMITED, remover o LIMITED
             f"Empresa com mais produtos: {company_nm.replace(' LIMITED', '')}")
 
-#
 # SOURCE
 # 2
 # max and min in date
