@@ -17,10 +17,10 @@ class Inventory:
     def csv_path(path, type):
         with open(path, encoding="utf-8") as file:
             dic_reader = csv.DictReader(file, delimiter=",", quotechar='"')
-            if type == "completo":
-                return CompleteReport.generate(dic_reader)
-            elif type == type == "simples":
+            if type == "simples":
                 return SimpleReport.generate(list(dic_reader))
+            elif type == "completo":
+                return CompleteReport.generate(list(dic_reader))
 
     @staticmethod
     def json_path(path, type):
