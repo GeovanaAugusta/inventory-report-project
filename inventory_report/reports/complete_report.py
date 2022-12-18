@@ -22,7 +22,7 @@ class CompleteReport:
         # Counter({'Mendes': 2, 'Mendes LIMITED': 1, 'Men': 1})
         print(company_names)
 
-        products = company_names.most_common(3)
+        products = company_names.most_common()
         # Produto x quantidade, num array, [0] = nome, [1] = qnt
         # [({'Mendes, 2, 'Mendes LIMITED', 1, 'Men', 1})]
         # print(products)
