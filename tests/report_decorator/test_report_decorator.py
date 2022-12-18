@@ -19,9 +19,9 @@ def test_decorar_relatorio():
     simple_report = ColoredReport(SimpleReport).generate(mockedProduct)
     complete_report = ColoredReport(CompleteReport).generate(mockedProduct)
 
-    print(simple_report)
-    print("xx", "\033[32mData de fabricação mais antiga:\033[0m"
-          in complete_report)
+    # print(simple_report)
+    # print("xx", "\033[32mData de fabricação mais antiga:\033[0m"
+    #       in complete_report)
 
 # vermelho: - \033[31mVermelho\033[0m" Nome da empresa com mais produtos
     assert ("\033[31mPapelaria Solar\033[0m" in simple_report) is True
@@ -44,3 +44,5 @@ def test_decorar_relatorio():
 # azul: - \033[36mAzul\033[0m As datas
     assert ("\033[36m2021-07-04\033[0m" in simple_report) is True
     assert ("\033[36m2021-07-04\033[0m" in complete_report) is True
+    assert ("\033[36m2029-02-09\033[0m" in simple_report) is True
+    assert ("\033[36m2029-02-09\033[0m" in complete_report) is True
